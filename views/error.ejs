@@ -1,5 +1,7 @@
 <%- include('partials/header') %>
 
+<!-- Error page (adapted from express-generator). Shows the error message;
+     the status and stack trace only appear in development, not on Render. -->
 <h1><%= message %></h1>
 <% if (error && error.status) { %><h2><%= error.status %></h2><% } %>
 <% if (error && error.stack) { %><pre><%= error.stack %></pre><% } %>
