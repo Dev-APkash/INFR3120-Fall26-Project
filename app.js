@@ -1,6 +1,10 @@
 // Load variables from the .env file (MONGO_URI) into process.env
 require('dotenv').config({ quiet: true });
 
+// Treat form dates as Toronto time. Render's servers run in UTC, so without
+// this a session entered for 3:00 PM would be saved and shown as the wrong time.
+process.env.TZ = 'America/Toronto';
+
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');

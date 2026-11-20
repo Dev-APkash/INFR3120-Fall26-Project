@@ -1,0 +1,35 @@
+<%- include('partials/header') %>
+
+<%
+  // The datetime-local input needs "YYYY-MM-DDTHH:mm" in local (Toronto) time.
+  // 'sv-SE' formats dates as "YYYY-MM-DD HH:mm", so we only swap the space for a "T".
+  const dateValue = session.date
+    .toLocaleString('sv-SE', { timeZone: 'America/Toronto' })
+    .slice(0, 16)
+    .replace(' ', 'T');
+%>
+
+<h1>Edit Study Session</h1>
+
+<!-- Same fields as the create form, filled in with the saved values -->
+<form action="/edit/<%= session._id %>" method="POST" class="session-form">
+  <label for="course">Course code</label>
+  <input id="course" name="course" value="<%= session.course %>" required>
+
+  <label for="topic">Topic</label>
+  <input id="topic" name="topic" value="<%= session.topic %>" required>
+
+  <label for="date">Date and time</label>
+  <input id="date" name="date" type="datetime-local" value="<%= dateValue %>" required>
+
+  <label for="location">Location</label>
+  <input id="location" name="location" value="<%= session.location %>" required>
+
+  <label for="host">Your name (host)</label>
+  <input id="host" name="host" value="<%= session.host %>" required>
+
+  <button type="submit" class="button">Save Changes</button>
+  <a href="/">Cancel</a>
+</form>
+
+<%- include('partials/footer') %>

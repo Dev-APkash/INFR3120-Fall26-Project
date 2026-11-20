@@ -8,6 +8,46 @@
   <a href="/create" class="button">Create a Study Session</a>
 </section>
 
-<!-- Part B: the table of study sessions goes here -->
+<!-- List of all study sessions (sessions comes from the "/" route) -->
+<section>
+  <h2>Upcoming Study Sessions</h2>
+
+  <% if (sessions.length === 0) { %>
+    <p class="empty">No study sessions yet. Be the first to create one!</p>
+  <% } else { %>
+    <table class="sessions">
+      <thead>
+        <tr>
+          <th>Course</th>
+          <th>Topic</th>
+          <th>Date</th>
+          <th>Location</th>
+          <th>Host</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% sessions.forEach(function(s) { %>
+          <tr>
+            <td><%= s.course %></td>
+            <td><%= s.topic %></td>
+            <!-- Format the date, e.g. "Nov 24, 2026, 3:00 PM" -->
+            <td><%= s.date.toLocaleString('en-CA', { dateStyle: 'medium', timeStyle: 'short', timeZone: 'America/Toronto' }) %></td>
+            <td><%= s.location %></td>
+            <td><%= s.host %></td>
+            <td class="actions">
+              <a href="/edit/<%= s._id %>" class="button small">Edit</a>
+              <!-- Delete is a POST form; confirm() asks before removing -->
+              <form action="/delete/<%= s._id %>" method="POST"
+                    onsubmit="return confirm('Delete this study session?');">
+                <button type="submit" class="button small danger">Delete</button>
+              </form>
+            </td>
+          </tr>
+        <% }) %>
+      </tbody>
+    </table>
+  <% } %>
+</section>
 
 <%- include('partials/footer') %>
