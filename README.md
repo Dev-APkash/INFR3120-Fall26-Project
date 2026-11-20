@@ -2,7 +2,9 @@
 
 A web app that helps college students find, create and manage study sessions with their classmates.
 
-**Live site:** _add Render link here_
+**Live site:** https://studyspot-vk26.onrender.com
+
+> Hosted on Render's free tier, so the first visit after a while may take 30–60 seconds while the server wakes up.
 
 ## Features (Project Part 1)
 
