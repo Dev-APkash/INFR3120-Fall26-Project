@@ -1,0 +1,8 @@
+<%- include('partials/header') %>
+
+<h1><%= message %></h1>
+<% if (error && error.status) { %><h2><%= error.status %></h2><% } %>
+<% if (error && error.stack) { %><pre><%= error.stack %></pre><% } %>
+<a href="/">Back to home</a>
+
+<%- include('partials/footer') %>

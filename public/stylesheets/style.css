@@ -1,0 +1,52 @@
+/* Base layout (Part A). More styling is added in Part B. */
+body {
+  margin: 0;
+  font: 16px "Segoe UI", Helvetica, Arial, sans-serif;
+  color: #1F2933;
+}
+
+main {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+a {
+  color: #1F3A5F;
+}
+
+/* Header with logo + name */
+.site-header {
+  padding: 12px 24px;
+  border-bottom: 1px solid #ddd;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+/* Landing page hero */
+.hero {
+  text-align: center;
+  padding: 32px 0;
+}
+
+/* Create form: one field per line */
+.session-form {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-width: 400px;
+}
+
+.site-footer {
+  text-align: center;
+  color: #777;
+  font-size: 14px;
+  padding: 24px;
+}

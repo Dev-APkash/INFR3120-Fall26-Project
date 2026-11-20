@@ -1,0 +1,18 @@
+<!-- StudySpot team logo: an open book with a location pin above it
+     ("study" + "spot"). Drawn by hand for this project. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" role="img" aria-label="StudySpot logo">
+  <!-- Rounded square background -->
+  <rect x="4" y="4" width="112" height="112" rx="24" fill="#1F3A5F"/>
+
+  <!-- Open book: two pages meeting at a spine -->
+  <path d="M18 72 Q38 64 60 74 L60 100 Q38 90 18 98 Z" fill="#F4F1E8"/>
+  <path d="M102 72 Q82 64 60 74 L60 100 Q82 90 102 98 Z" fill="#E4DFD0"/>
+  <line x1="60" y1="74" x2="60" y2="100" stroke="#1F3A5F" stroke-width="2"/>
+  <!-- Text lines on the pages -->
+  <path d="M26 79 Q38 75 52 80 M26 86 Q38 82 52 87" stroke="#9AA7B8" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <path d="M94 79 Q82 75 68 80 M94 86 Q82 82 68 87" stroke="#9AA7B8" stroke-width="2" fill="none" stroke-linecap="round"/>
+
+  <!-- Location pin standing on the book -->
+  <path d="M60 70 C50 56 42 47 42 36 A18 18 0 0 1 78 36 C78 47 70 56 60 70 Z" fill="#F2A541"/>
+  <circle cx="60" cy="36" r="7" fill="#1F3A5F"/>
+</svg>

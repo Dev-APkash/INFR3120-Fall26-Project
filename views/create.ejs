@@ -1,0 +1,26 @@
+<%- include('partials/header') %>
+
+<h1>Create a Study Session</h1>
+
+<!-- Form fields match the StudySession model; the browser checks "required" -->
+<form action="/create" method="POST" class="session-form">
+  <label for="course">Course code</label>
+  <input id="course" name="course" placeholder="e.g. INFR3120" required>
+
+  <label for="topic">Topic</label>
+  <input id="topic" name="topic" placeholder="e.g. Express routing" required>
+
+  <label for="date">Date and time</label>
+  <input id="date" name="date" type="datetime-local" required>
+
+  <label for="location">Location</label>
+  <input id="location" name="location" placeholder="Library room 2 or an online link" required>
+
+  <label for="host">Your name (host)</label>
+  <input id="host" name="host" placeholder="e.g. Aarush" required>
+
+  <button type="submit" class="button">Create</button>
+  <a href="/">Back</a>
+</form>
+
+<%- include('partials/footer') %>
